@@ -7,7 +7,7 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<meta name="mith-build" content="V1.00-200-real-horse-head-portraits">
+<meta name="mith-build" content="V1.07-bet-place-clear-market-card">
 <title>Money in the Horse — Prototype V0.97</title>
 <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png?v=55">
 <link rel="apple-touch-icon-precomposed" href="./apple-touch-icon.png?v=55">
@@ -384,6 +384,11 @@ body{
 .worldGrid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin:10px 0}.worldStat{background:#0a1510;border:1px solid rgba(255,255,255,.05);border-radius:10px;padding:9px}.worldStat span{display:block;color:var(--muted);font-size:9px;text-transform:uppercase;font-weight:900}.worldStat b{display:block;margin-top:3px;color:var(--gold);font-family:Georgia,serif;font-size:18px}
 .horseDirectory{display:grid;gap:7px}.directoryRow{display:grid;grid-template-columns:1fr auto;gap:8px;align-items:center;padding:10px;background:#0b1710;border:1px solid rgba(255,255,255,.05);border-radius:11px;cursor:pointer}.directoryRow:hover{border-color:var(--line)}.rookieTag{display:inline-block;padding:3px 6px;border-radius:999px;background:#23391f;color:#9be0a5;font-size:8px;font-weight:900;margin-left:5px}.ownerTag{font-size:9px;color:var(--muted)}
 .valueSpark{font-size:9px;font-weight:900}.valueSpark.up{color:#78cc8a}.valueSpark.down{color:#df8078}
+
+/* ===== V1.04 ALERTE FIN DE CARRIÈRE ===== */
+.careerAlert{margin-top:9px;padding:10px 11px;border-radius:11px;border:1px solid rgba(223,196,119,.35);background:#211b0f;color:#ead69b;font-size:10px;line-height:1.45}
+.careerAlert.urgent{border-color:rgba(223,128,120,.55);background:#2a1714;color:#f0aaa2}
+.careerAlert b{color:inherit}
 
 /* ===== V0.20 AGE / RETIREMENT ===== */
 .retirementTag{display:inline-block;padding:3px 6px;border-radius:999px;background:#3a261d;color:#efb08c;font-size:8px;font-weight:900;margin-left:5px}
@@ -909,6 +914,54 @@ button:disabled{opacity:.45;cursor:not-allowed;filter:saturate(.45)}
   background-repeat:no-repeat!important;
 }
 
+
+
+/* ===== V1.05 ÉCONOMIE DE TRADING VIVANTE ===== */
+.marketEconomyBoard{margin:10px 0 12px;border:1px solid rgba(223,196,119,.34);background:linear-gradient(180deg,#14271c,#09140e);border-radius:16px;padding:13px}
+.marketEconomyHead{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}
+.marketEconomyIndex{font-family:Georgia,serif;font-size:25px;color:var(--gold);font-weight:900;text-align:right}
+.marketEconomyGrid{display:grid;grid-template-columns:repeat(2,1fr);gap:7px;margin-top:10px}
+.marketEconomyCell{background:#0a1510;border:1px solid rgba(255,255,255,.055);border-radius:10px;padding:9px}
+.marketEconomyCell span{display:block;color:var(--muted);font-size:9px;text-transform:uppercase;font-weight:900}
+.marketEconomyCell b{display:block;margin-top:3px;font-size:14px}
+.marketEconomyCell .hot{color:#f0c66f}.marketEconomyCell .up{color:#78cc8a}.marketEconomyCell .down{color:#df8078}
+.marketEconomyNews{margin-top:9px;padding:9px 10px;border-radius:10px;background:#0a1510;border:1px solid rgba(223,196,119,.16);font-size:10px;line-height:1.45;color:#c5cec7}
+.tradeAnalysisBox{margin-top:12px;border:1px solid rgba(223,196,119,.28);background:#0a1510;border-radius:14px;padding:11px}
+.tradeAnalysisGrid{display:grid;grid-template-columns:repeat(2,1fr);gap:7px;margin-top:8px}
+.tradeAnalysisStat{background:#102018;border-radius:9px;padding:8px;border:1px solid rgba(255,255,255,.045)}
+.tradeAnalysisStat span{display:block;color:var(--muted);font-size:8px;text-transform:uppercase;font-weight:900}.tradeAnalysisStat b{display:block;margin-top:3px;font-size:12px}
+.tradeRisk{margin-top:8px;font-size:10px;line-height:1.45;color:#c1cbc4}.tradeRisk strong{color:var(--gold)}
+@media(max-width:390px){.marketEconomyGrid,.tradeAnalysisGrid{grid-template-columns:1fr}.marketEconomyHead{display:block}.marketEconomyIndex{text-align:left;margin-top:6px}}
+
+
+/* ===== V1.06 PRIME DE CARRIÈRE + RETRAITE ANTICIPÉE DISSUASIVE ===== */
+.retirementBreakdown{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:9px}
+.retirementBreakdown>div{background:#111c15;border:1px solid rgba(255,255,255,.05);border-radius:9px;padding:8px;text-align:center}
+.retirementBreakdown span{display:block;color:var(--muted);font-size:8px;text-transform:uppercase;font-weight:900}
+.retirementBreakdown b{display:block;margin-top:3px;color:var(--cream);font-size:11px}
+.retirementPenalty{margin-top:8px;padding:9px 10px;border-radius:10px;background:#2a1714;border:1px solid rgba(223,128,120,.42);color:#efb0aa;font-size:10px;line-height:1.45}
+.retirementNatural{margin-top:8px;padding:9px 10px;border-radius:10px;background:#10251a;border:1px solid rgba(120,204,138,.30);color:#a8dfb1;font-size:10px;line-height:1.45}
+.retirementCareerBar{height:8px;background:#1a281f;border-radius:999px;overflow:hidden;margin-top:8px}
+.retirementCareerBar>div{height:100%;background:linear-gradient(90deg,#6f8f70,#dfc477);width:0}
+.chartLegendRow{display:flex;gap:10px;flex-wrap:wrap;margin-top:7px;font-size:9px;color:var(--muted)}
+.chartLegendRow span{display:inline-flex;align-items:center;gap:5px}
+.chartLegendDot{width:8px;height:8px;border-radius:50%;display:inline-block;background:#dfc477}
+.chartLegendDash{width:18px;border-top:2px dashed #78cc8a;display:inline-block}
+@media(max-width:390px){.retirementBreakdown{grid-template-columns:1fr}}
+
+
+/* ===== V1.07 LISIBILITÉ PARIS + FICHE ACHAT ===== */
+.tradeAnalysisBox h3{font-size:20px;margin-bottom:10px}
+.tradeAnalysisStat{padding:11px!important}
+.tradeAnalysisStat span{font-size:9px!important}
+.tradeAnalysisStat b{font-size:14px!important;line-height:1.25}
+.tradeAnalysisStat small{display:block;margin-top:5px;color:var(--muted);font-size:9px;line-height:1.35}
+.tradeVerdict{margin-top:10px;padding:10px 11px;border-radius:10px;font-size:10px;line-height:1.5}
+.tradeVerdict strong{color:inherit}
+.tradeVerdict.good{background:#10251a;border:1px solid rgba(120,204,138,.35);color:#a7e7b2}
+.tradeVerdict.mid{background:#211d10;border:1px solid rgba(217,187,103,.32);color:#e3cd8f}
+.tradeVerdict.bad{background:#2a1714;border:1px solid rgba(223,128,120,.38);color:#e9a19b}
+
 </style>
 
 <style>
@@ -984,6 +1037,15 @@ button:disabled{opacity:.45;cursor:not-allowed;filter:saturate(.45)}
   .managerProfileHead{grid-template-columns:1fr}
   .managerProfileHead .collapseBtn{width:100%}
 }
+
+/* ===== V1.06 MANAGERS : MISSION ACTUELLE / ENGAGEMENTS EN COURS ===== */
+.managerCurrentMission{margin-top:12px;padding:11px 12px;border:1px solid rgba(120,204,138,.32);background:#0d2116;border-radius:12px;font-size:11px;line-height:1.45;color:#aebbb2}
+.managerCurrentMission b{color:#8fe3a0}
+.managerCommitments{margin-top:12px;padding-top:12px;border-top:1px solid rgba(255,255,255,.07)}
+.managerCommitmentCard{margin-top:8px;padding:11px;border:1px solid rgba(223,196,119,.28);background:#0a1510;border-radius:12px}
+.managerCommitmentBadge{display:inline-block;padding:4px 7px;border-radius:999px;background:#2a2618;color:#f2d584;font-size:9px;font-weight:900}
+.managerCommitmentMeta{margin-top:5px;color:var(--muted);font-size:10px;line-height:1.45}
+.managerSectionTitle{margin-top:14px}
 </style>
 
 </head>
@@ -2226,35 +2288,54 @@ function retirementRisk(h){
   return clamp(risk,0,.72);
 }
 
-function retirementPayout(h){
-  if(!h)return 0;
+function careerRetirementStatus(h){
+  ensureCareerMeta(h);
+  const races=(h.history||[]).length;
+  const raceLimitLeft=Math.max(0,30-races);
+  const sinceBirthday=Math.max(0,races-Number(h.racesAtLastBirthday||0));
+  const ageLimitLeft=Math.max(0,(10-Number(h.age||0))*4-sinceBirthday);
+  const left=Math.min(raceLimitLeft,ageLimitLeft);
+  const cause=ageLimitLeft<=raceLimitLeft?"âge limite de 10 ans":"maximum de 30 courses";
+  return {left,cause,races,age:h.age||0};
+}
+function careerRetirementAlertHtml(h){
+  const s=careerRetirementStatus(h);
+  if(s.left>4)return "";
+  if(s.left<=0)return `<div class="careerAlert urgent"><b>🏁 FIN DE CARRIÈRE IMMINENTE</b><br>Ce cheval a atteint sa limite et partira à la retraite dès que ses engagements en cours permettront son retrait.</div>`;
+  const urgent=s.left<=2;
+  return `<div class="careerAlert ${urgent?"urgent":""}"><b>${urgent?"⚠️":"⏳"} RETRAITE PROCHE — ${s.left} course${s.left>1?"s":""} maximum restante${s.left>1?"s":""}</b><br>Fin de carrière obligatoire au ${s.cause}. Si tu veux réaliser sa valeur de marché, pense à le vendre avant cette limite.</div>`;
+}
+
+function retirementCareerDetails(h){
+  if(!h)return {races:0,wins:0,podiums:0,completion:0,current:700,estimate:700,performanceShare:0,careerShare:0,fixedCareer:0,payout:250};
   const hist=Array.isArray(h.history)?h.history:[];
-  const races=hist.length;
+  const races=Math.min(30,hist.length);
   const wins=hist.filter(x=>Number(x&&x.place)===1).length;
   const podiums=hist.filter(x=>Number.isFinite(Number(x&&x.place))&&Number(x.place)<=3).length;
-
+  const completion=clamp(races/30,0,1);
   const current=Number.isFinite(Number(h.price))?Math.max(700,Number(h.price)):700;
-  let estimate=(typeof auctionEstimate==="function")?auctionEstimate(h):current;
-  if(!Number.isFinite(Number(estimate)))estimate=current;
-
-  const values=(Array.isArray(h.valueHistory)?h.valueHistory:[])
-    .map(x=>Number(x&&x.value))
-    .filter(Number.isFinite);
-  const peak=Math.max(current,...values);
+  let estimate=(typeof auctionEstimate==="function")?Number(auctionEstimate(h)):current;
+  if(!Number.isFinite(estimate)||estimate<=0)estimate=current;
   const legend=isLegendHorse(h);
 
-  const careerBonus=Math.min(1200,races*35+wins*120+podiums*45);
-  const legacyBonus=Math.min(legend?2600:900,peak*(legend?.055:.025));
-  let raw=current*(legend?.40:.24)+careerBonus+legacyBonus;
+  // La carrière compte réellement : un vieux cheval moyen peut avoir une vraie valeur
+  // de sortie sans devenir plus performant sportivement.
+  const careerShare=.08+.47*Math.pow(completion,1.65);
+  const performanceShare=Math.min(.12,wins*.012+podiums*.004);
+  const fixedCareer=races*18+wins*55+podiums*18;
+  let raw=estimate*(careerShare+performanceShare+(legend?.08:0))+fixedCareer;
 
-  const maxShare=legend?.58:.42;
+  // Une retraite naturelle reste un filet de sécurité, jamais une meilleure vente garantie.
+  const maxShare=legend?.90:.80;
   raw=Math.min(raw,Math.max(250,estimate*maxShare));
   raw=Math.max(250,raw);
+  if(!Number.isFinite(raw))raw=Math.max(250,current*.25);
 
-  // Dernière barrière : il est désormais impossible d'afficher/payer NaN.
-  if(!Number.isFinite(raw))raw=Math.max(250,current*.30);
   const payout=Math.max(250,Math.round(raw/50)*50);
-  return Number.isFinite(payout)?payout:250;
+  return {races,wins,podiums,completion,current,estimate,legend,careerShare,performanceShare,fixedCareer,payout};
+}
+function retirementPayout(h){
+  return retirementCareerDetails(h).payout;
 }
 
 function canRetireNow(h){
@@ -2426,7 +2507,9 @@ function aiConsiderRetirements(force=false){
     if(isLegendHorse(h))urge*=.38;
 
     if(urge>0 && Math.random()<clamp(urge,.02,.82)){
-      if(retireHorse(h,`Retraite décidée par ${a.name}`,{payout}))retired++;
+      const remaining=manualRetirementRemainingForOwner(a.name);
+      if(remaining>0)continue;
+      if(retireHorse(h,`Retraite décidée par ${a.name}`,{payout,manual:true}))retired++;
     }
   }
   return retired>0;
@@ -3332,12 +3415,15 @@ function resolvePendingBets(){
     const finish=(b.horseId?result.find(x=>x.horseId===b.horseId):null) || result.find(x=>x.name===b.horseName) || result.find(x=>x.i===b.runner);
     const betType=b.betType||"win"; // anciennes sauvegardes = pari gagnant, comportement historique intact
     const isWinner=finish && (betType==="place" ? finish.place<=3 : finish.place===1);
+    // Conserver le classement réel du cheval et le retour réellement payé.
+    // Les anciennes versions n'enregistraient pas ces deux infos de façon cohérente.
+    b.finishPlace=finish&&Number.isFinite(Number(finish.place))?Number(finish.place):null;
     if(isWinner){
       const payout=Math.max(0,Math.round(b.stake*b.odds)),profit=payout-b.stake;
-      b.status="win";b.payout=payout;b.profit=profit;state.balance+=payout;state.betWins++;
+      b.status="win";b.payout=payout;b.returnAmount=payout;b.profit=profit;state.balance+=payout;state.betWins++;
       state.stats.betReturns+=payout;state.stats.betProfit+=Math.max(0,profit);
     }else{
-      b.status="loss";b.payout=0;b.profit=-b.stake;state.stats.betLosses+=b.stake;
+      b.status="loss";b.payout=0;b.returnAmount=0;b.profit=-b.stake;state.stats.betLosses+=b.stake;
     }
     changed=true;
   });
@@ -3448,6 +3534,11 @@ function renderBetHistory(){
     const b=rec.item;
     const r=state.raceSchedule.find(x=>x.id===b.raceId);
     const open=openBetDetails.has(b.id);
+    // Récupère aussi la place pour les anciens paris déjà terminés avant cette correction.
+    const storedResult=(Array.isArray(b.result)&&b.result.length)?b.result:(r&&Array.isArray(r.result)?r.result:[]);
+    const finish=(b.horseId?storedResult.find(x=>x.horseId===b.horseId):null) || storedResult.find(x=>x.name===b.horseName) || storedResult.find(x=>x.i===b.runner);
+    const finishPlace=Number.isFinite(Number(b.finishPlace))?Number(b.finishPlace):(finish&&Number.isFinite(Number(finish.place))?Number(finish.place):null);
+    const paidReturn=Number.isFinite(Number(b.returnAmount))?Number(b.returnAmount):(Number.isFinite(Number(b.payout))?Number(b.payout):0);
     const d=document.createElement("div");
     d.className=`betCard ${b.status} ${isNext?"nextTracked":""}`;
     const statusLabel=b.status==="pending"?"EN ATTENTE":b.status==="win"?"GAGNÉ":"PERDU";
@@ -3457,7 +3548,8 @@ function renderBetHistory(){
       <div class="betMiniGrid">
         <div class="betMini"><span>Mise</span><b>${money(b.stake)} Or</b></div>
         <div class="betMini"><span>Cote</span><b>x${Number(b.odds).toFixed(1)}</b></div>
-        <div class="betMini"><span>Retour</span><b>${b.status==="pending"?"—":money(b.returnAmount||0)+" Or"}</b></div>
+        <div class="betMini"><span>Place d'arrivée</span><b>${b.status==="pending"?"—":finishPlace?finishPlace+"e":"Non disponible"}</b></div>
+        <div class="betMini"><span>Retour payé</span><b>${b.status==="pending"?"—":money(paidReturn)+" Or"}</b></div>
         <div class="betMini"><span>P&L</span><b>${b.status==="pending"?"—":(b.profit>=0?"+":"")+money(b.profit||0)+" Or"}</b></div>
       </div>
       <div class="raceActions">${b.status==="pending"&&r?`<button type="button" class="directBtn secondary" onclick="watchRaceById('${b.raceId}')">Voir le direct</button>`:r&&r.result?`<button type="button" class="secondary" onclick="showRaceResult('${b.raceId}')">Voir le résultat</button>`:""}</div>
@@ -4301,10 +4393,18 @@ function repairOwnedHorseState(){
   state.owned=fixed;
 
   // Recover horses from cancelled/expired player listings if an older build lost them.
+  // V1.01 : ne jamais restaurer une ANCIENNE annonce si le même cheval a été
+  // remis en vente ou vendu ensuite. C'était la cause du "cheval fantôme".
   if(state.auction&&Array.isArray(state.auction.myListings)){
-    state.auction.myListings.forEach(l=>{
+    state.auction.myListings.forEach((l,idx)=>{
       if(!l||!l.horse||!['cancelled','expired'].includes(l.status))return;
       if(state.retiredHorses&&state.retiredHorses.some(r=>r.id===l.horse.id))return;
+      const later=(state.auction.myListings||[]).slice(idx+1).some(n=>
+        n&&n.horse&&n.horse.id===l.horse.id&&['open','sold'].includes(n.status)
+      );
+      if(later)return;
+      const wh=worldHorseById(l.horse.id);
+      if(wh && wh.worldOwner && wh.worldOwner!==playerStableName() && wh.worldOwner!=="En vente par toi")return;
       if(!state.owned.some(h=>h.id===l.horse.id))restoreHorseFromListing(l);
     });
   }
@@ -4417,13 +4517,71 @@ function cancelMyListing(id){
   state.auction.tradeLog.unshift(`Vente annulée : ${h.name}`);
   save();renderMarket();renderStable();toast("Cheval récupéré dans Mes chevaux.");
 }
+
+// ===== V1.01 — GARDE-FOU TRANSACTIONNEL VENTE / PROPRIÉTÉ =====
+function finalizePlayerHorseSale(listing,buyerName,amount){
+  if(!listing||!listing.horse)return;
+  const horseId=listing.horse.id;
+
+  // Une vente confirmée retire le cheval de l'écurie, même si une ancienne
+  // annonce annulée l'avait accidentellement réinjecté dans state.owned.
+  state.owned=(state.owned||[]).filter(h=>h.id!==horseId);
+
+  // Si un cheval fantôme avait réussi à être inscrit après sa vente,
+  // l'inscription future est annulée et les frais sont remboursés UNE fois.
+  (state.raceSchedule||[]).forEach(r=>{
+    if(!r||r.result||r.startAt<=Date.now())return;
+    if(r.playerEntry&&r.playerEntry.horseId===horseId){
+      const refund=Math.max(0,Number(r.playerEntry.fee||0));
+      if(refund>0){
+        state.balance+=refund;
+        state.stats.ownerEntryFees=Math.max(0,Number(state.stats.ownerEntryFees||0)-refund);
+        listing.horse.entryFees=Math.max(0,Number(listing.horse.entryFees||0)-refund);
+      }
+      r.playerEntry=null;
+      r.field=(r.field||[]).filter(x=>x.id!==horseId);
+      refillOfficialField(r,horseId);
+      recalcRaceOdds(r);
+    }else{
+      r.field=(r.field||[]).filter(x=>x.id!==horseId || raceHorseOwner(x)!==playerStableName());
+    }
+  });
+
+  listing.soldAt=listing.soldAt||Date.now();
+  listing.soldPrice=Number(amount||listing.bestOffer||0);
+  listing.soldTo=buyerName||listing.bestBuyer||"Acheteur";
+}
+
+function repairGhostSoldPlayerHorses(){
+  if(!state.auction||!Array.isArray(state.auction.myListings))return 0;
+  let repaired=0;
+  const soldByHorse=new Map();
+  state.auction.myListings.forEach((l,idx)=>{
+    if(l&&l.horse&&l.status==="sold")soldByHorse.set(l.horse.id,{l,idx});
+  });
+
+  soldByHorse.forEach(({l})=>{
+    const wh=worldHorseById(l.horse.id);
+    const owner=wh&&wh.worldOwner;
+    if(owner && owner!==playerStableName() && owner!=="En vente par toi"){
+      const wasOwned=(state.owned||[]).some(h=>h.id===l.horse.id);
+      const hadEntry=(state.raceSchedule||[]).some(r=>!r.result&&r.startAt>Date.now()&&r.playerEntry&&r.playerEntry.horseId===l.horse.id);
+      if(wasOwned||hadEntry){
+        finalizePlayerHorseSale(l,owner,l.soldPrice||l.bestOffer||0);
+        repaired++;
+      }
+    }
+  });
+  return repaired;
+}
+
 function acceptMyOffer(id){
   let l=state.auction.myListings.find(x=>x.id===id&&x.status==="open");if(!l||!l.bestOffer)return;
   const buyer=aiAgent(l.bestBuyer);
   if(!buyer||buyer.cash<l.bestOffer)return toast("L'acheteur n'a finalement plus les liquidités nécessaires.");
   if(!stableHasCapacity(buyer.name,1))return toast("Cette écurie n'a plus de place.");
   debitAI(buyer,l.bestOffer,"trade");
-  state.balance+=l.bestOffer;l.status="sold";recordTradeValue(l.horse,l.bestOffer);
+  state.balance+=l.bestOffer;l.status="sold";finalizePlayerHorseSale(l,buyer.name,l.bestOffer);recordTradeValue(l.horse,l.bestOffer);
   let wh=worldHorseById(l.horse.id);if(wh){wh.worldOwner=buyer.name;recordOwnershipTransfer(wh,buyer.name,l.bestOffer,"auction")}
   state.auction.tradeLog.unshift(`${l.horse.name} vendu à ${buyer.name} pour ${money(l.bestOffer)} Or`);
   save();renderMarket();toast(`Vendu +${money(l.bestOffer)} Or`);
@@ -4441,7 +4599,7 @@ function counterMyOffer(id){
   acceptChance=clamp(acceptChance,.03,.75);
   if(amt<=ceiling&&buyer.cash>=amt&&stableHasCapacity(buyer.name,1)&&Math.random()<acceptChance){
     debitAI(buyer,amt,"trade");
-    state.balance+=amt;l.status="sold";recordTradeValue(l.horse,amt);
+    state.balance+=amt;l.status="sold";finalizePlayerHorseSale(l,buyer.name,amt);recordTradeValue(l.horse,amt);
     const wh=worldHorseById(l.horse.id);if(wh){wh.worldOwner=buyer.name;recordOwnershipTransfer(wh,buyer.name,amt,"auction")}
     state.auction.tradeLog.unshift(`${buyer.name} accepte ta contre-offre : ${l.horse.name} vendu ${money(amt)} Or`);
     save();renderMarket();toast("Contre-offre acceptée !");return;
@@ -4557,7 +4715,7 @@ function auctionAITick(){
         if(l.bestBuyer===buyer.name&&l.bestOffer>=l.ask*.985&&buyer.cash>=l.bestOffer&&Math.random()<instant){
           debitAI(buyer,l.bestOffer,"trade");
           state.balance+=l.bestOffer;
-          l.status="sold";recordTradeValue(l.horse,l.bestOffer);
+          l.status="sold";finalizePlayerHorseSale(l,buyer.name,l.bestOffer);recordTradeValue(l.horse,l.bestOffer);
           const wh=worldHorseById(l.horse.id);
           if(wh){wh.worldOwner=buyer.name;recordOwnershipTransfer(wh,buyer.name,l.bestOffer,"auction")}
           state.auction.tradeLog.unshift(`${buyer.name} craque et achète ${l.horse.name} pour ${money(l.bestOffer)} Or`);
@@ -5429,6 +5587,7 @@ function renderStable(){
           <h3>${h.name}</h3>
           <span class="stableNameBadge">${playerStableName()}</span>
           <div class="sub">Valeur ${money(h.price)} Or · P&L courses ${pnl>=0?'+':''}${money(pnl)} Or</div>
+          ${careerRetirementAlertHtml(h)}
         </div>
         <button class="collapseBtn" onclick="toggleHorseCard('${h.id}')"><span id="horseToggle-${h.id}">${openHorseCards.has(h.id)?'Réduire':'Déployer'}</span></button>
       </div>
@@ -5467,15 +5626,7 @@ function renderStable(){
         ${horseHasFutureEngagement(h)?`<div class="autoEconomyNote"><b>Vente verrouillée :</b> retire ce cheval de toutes ses courses futures avant de pouvoir le mettre en vente.</div>`:""}
         ${stableRaceRegistrationHtml(h)}
         <button type="button" class="secondary" style="margin-top:10px" onclick="openSellForHorse('${h.id}')">Mettre à l'Hôtel des ventes</button>
-        ${(()=>{const rp=retirementPayout(h),ae=auctionEstimate(h),blocked=!canRetireNow(h);return `
-        <div class="retirementActionBox">
-          <div class="eyebrow">Retraite définitive</div>
-          <div class="sub">Prime reçue immédiatement</div>
-          <div class="retirementMoney">${money(rp)} Or</div>
-          <div class="retirementCompare">Valeur actuelle : <b>${money(h.price)} Or</b> · Estimation de vente : <b>${money(ae)} Or</b>.<br>La vente reste normalement plus rentable que la retraite.</div>
-          <div class="retirementWarn">${blocked?"Retraite verrouillée : retire d’abord ce cheval de ses courses futures ou annule sa vente en cours.":"Après confirmation, le cheval disparaît définitivement de l’économie et rejoint le Hall des retraités."}</div>
-          <button type="button" class="secondary retirementActionBtn" ${blocked?"disabled":""} onclick="playerRetireHorse('${h.id}')">Mettre à la retraite — recevoir ${money(rp)} Or</button>
-        </div>`})()}
+        <div class="retirementActionBox">${retirementUiHtmlV106(h,false)}</div>
       </div>`;
     applyHorseIdentity(d.querySelector(".horsePhotoThumb"),h);
     $("stableList").appendChild(d);
@@ -5514,7 +5665,8 @@ function renderHorsePriceChart(h){
   hist=hist.slice(-40);
 
   const values=hist.map(p=>Number(p.value));
-  const low=Math.min(...values),high=Math.max(...values),current=w.price||values[values.length-1];
+  const current=Number(w.price||values[values.length-1]||0);
+  const low=Math.min(...values),high=Math.max(...values);
   const first=values[0]||current;
   const variation=first?((current-first)/first*100):0;
 
@@ -5529,22 +5681,29 @@ function renderHorsePriceChart(h){
   const W=500,H=155,padX=14,padY=16;
   let min=low,max=high;
   if(max===min){max=min+100;min=Math.max(0,min-100)}
-  const range=max-min;
-  const pts=hist.map((p,i)=>{
-    const x=hist.length===1?W/2:padX+i*(W-2*padX)/(hist.length-1);
-    const y=H-padY-(Number(p.value)-min)/range*(H-2*padY);
-    return {x,y,v:Number(p.value),reason:p.reason||"marché"};
-  });
+  const margin=Math.max(100,(max-min)*.10);min=Math.max(0,min-margin);max+=margin;
+  const range=Math.max(1,max-min);
+  const yFor=v=>H-padY-(Number(v)-min)/range*(H-2*padY);
+  const pts=hist.map((p,i)=>({
+    x:hist.length===1?W/2:padX+i*(W-2*padX)/(hist.length-1),
+    y:yFor(p.value),v:Number(p.value),reason:p.reason||"marché"
+  }));
   const poly=pts.map(p=>`${p.x.toFixed(1)},${p.y.toFixed(1)}`).join(" ");
   const area=`${padX},${H-padY} ${poly} ${pts[pts.length-1].x},${H-padY}`;
   const grid=[.25,.5,.75].map(k=>`<line x1="${padX}" y1="${(padY+(H-2*padY)*k).toFixed(1)}" x2="${W-padX}" y2="${(padY+(H-2*padY)*k).toFixed(1)}" stroke="rgba(255,255,255,.07)" stroke-width="1"/>`).join("");
+
   svg.innerHTML=`${grid}
     <polygon points="${area}" fill="rgba(223,196,119,.08)"/>
     <polyline points="${poly}" fill="none" stroke="#dfc477" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
-    ${pts.map((p,i)=>`<circle cx="${p.x}" cy="${p.y}" r="${i===pts.length-1?4:2.2}" fill="${i===pts.length-1?'#f4efe4':'#dfc477'}"/>`).join("")}
-    <text x="${padX}" y="12" fill="#9ca89f" font-size="10">${money(high)} Or</text>
-    <text x="${padX}" y="${H-2}" fill="#9ca89f" font-size="10">${money(low)} Or</text>`;
+    ${pts.map((p,i)=>`<circle cx="${p.x}" cy="${p.y}" r="${i===pts.length-1?4:2.4}" fill="${i===pts.length-1?'#f4efe4':'#dfc477'}"><title>${money(p.v)} Or · ${p.reason}</title></circle>`).join("")}
+    <text x="${padX}" y="12" fill="#9ca89f" font-size="10">${money(max)} Or</text>
+    <text x="${padX}" y="${H-2}" fill="#9ca89f" font-size="10">${money(min)} Or</text>`;
+
+  let legend=document.querySelector("#horseModal .chartLegendRow");
+  if(!legend){legend=document.createElement("div");legend.className="chartLegendRow";svg.parentElement.appendChild(legend)}
+  legend.innerHTML=`<span><i class="chartLegendDot"></i> Prix du cheval sur le marché</span><span style="display:block;flex-basis:100%;color:#9ca89f">Chaque point = une évolution de prix. La courbe monte quand le marché paie plus cher et baisse quand il paie moins cher.</span>`;
 }
+
 function fillHorseModal(h){
   $("modalName").textContent=h.name;
   $("modalOwner").textContent=worldOwner(worldHorseById(h.id)||h);
@@ -5558,9 +5717,8 @@ function fillHorseModal(h){
   const oldRet=document.querySelector("#horseModal .modalRetirementInfo");if(oldRet)oldRet.remove();
   const owned=(state.owned||[]).some(x=>x.id===h.id);
   if(owned){
-    const rp=retirementPayout(h),ae=auctionEstimate(h),blocked=!canRetireNow(h);
     const box=document.createElement("div");box.className="retirementActionBox modalRetirementInfo";
-    box.innerHTML=`<div class="eyebrow">Retraite de ton cheval</div><div class="sub">Tu recevras exactement</div><div class="retirementMoney">${money(rp)} Or</div><div class="retirementCompare">Estimation de vente : <b>${money(ae)} Or</b>. Vendre reste normalement plus rentable.</div><button type="button" class="secondary retirementActionBtn" ${blocked?"disabled":""} onclick="closeHorseDetail();playerRetireHorse('${h.id}')">Mettre à la retraite — recevoir ${money(rp)} Or</button>`;
+    box.innerHTML=retirementUiHtmlV106(h,true);
     document.querySelector("#horseModal .modalCard").appendChild(box);
   }
   $("horseModal").classList.add("show");
@@ -6056,6 +6214,13 @@ function enterHorseInOfficialRace(raceId,horseId){
   ensureRaceSchedule();
   const r=(state.raceSchedule||[]).find(x=>x.id===raceId),h=(state.owned||[]).find(x=>x.id===horseId);
   if(!r||!h)return toast("Course ou cheval introuvable.");
+  const _worldOwner=worldOwner(worldHorseById(h.id)||h);
+  const _openSale=(state.auction?.myListings||[]).some(l=>l&&l.horse&&l.horse.id===h.id&&l.status==="open");
+  if(_openSale || (_worldOwner && _worldOwner!==playerStableName())){
+    state.owned=(state.owned||[]).filter(x=>x.id!==h.id);
+    saveNoRender();renderStable();
+    return toast("Inscription impossible : ce cheval ne t’appartient plus.");
+  }
   if(r.result||Date.now()>=r.startAt)return toast("Les inscriptions sont fermées.");
 
   // Protection absolue double inscription / double débit.
@@ -6734,13 +6899,148 @@ const _resolveRaceOfficialV064=resolveRaceOfficial;resolveRaceOfficial=function(
 const _placeBetV064=placeBet;placeBet=function(){const before=(state.betHistory||[]).length;_placeBetV064();if((state.betHistory||[]).length>before){const b=repDayBucket();const already=Math.max(0,b.bet||0);if(already<5)addReputation(1,"activité régulière sur les paris","bet",Date.now(),true);saveNoRender()}};
 const _transferHorseToPlayerV064=transferHorseToPlayer;transferHorseToPlayer=function(listing,price){const ok=_transferHorseToPlayerV064(listing,price);if(ok&&listing&&listing.horse){registerPlayerHorseArrival(worldHorseById(listing.horse.id)||listing.horse);saveNoRender()}return ok};
 const _buyHorseV064=buyHorse;buyHorse=function(id){const before=new Set((state.owned||[]).map(h=>h.id));_buyHorseV064(id);const h=(state.owned||[]).find(x=>!before.has(x.id));if(h){registerPlayerHorseArrival(h);saveNoRender()}};
-function earlyRetirementTaxForOwner(owner,ts=Date.now()){
-  const windowMs=7*86400000;let arr;if(owner===playerStableName()){ensureReputationState();state.earlyRetirements=state.earlyRetirements.filter(x=>ts-x.at<windowMs);arr=state.earlyRetirements}else{const a=aiAgent(owner);if(!a)return 0;ensureAIReputation(a);a.earlyRetirements=a.earlyRetirements.filter(x=>ts-x.at<windowMs);arr=a.earlyRetirements}
-  const n=arr.length;return [0,250,600,1200,2200,3500][Math.min(n,5)];
+const MANUAL_RETIREMENT_COOLDOWN=24*60*60*1000;
+
+function retirementHistoryForOwner(owner,ts=Date.now()){
+  const keepMs=8*86400000;
+  let arr;
+  if(owner===playerStableName()){
+    ensureReputationState();
+    state.earlyRetirements=(state.earlyRetirements||[]).filter(x=>x&&Number.isFinite(Number(x.at))&&ts-Number(x.at)<keepMs);
+    arr=state.earlyRetirements;
+  }else{
+    const a=aiAgent(owner);if(!a)return [];
+    ensureAIReputation(a);
+    a.earlyRetirements=(a.earlyRetirements||[]).filter(x=>x&&Number.isFinite(Number(x.at))&&ts-Number(x.at)<keepMs);
+    arr=a.earlyRetirements;
+  }
+  return arr;
 }
-function recordEarlyRetirement(owner,ts=Date.now()){if(owner===playerStableName()){state.earlyRetirements.push({at:ts})}else{const a=aiAgent(owner);if(a){ensureAIReputation(a);a.earlyRetirements.push({at:ts})}}}
-const _retireHorseV064=retireHorse;retireHorse=function(h,reason="Fin de carrière",opts={}){if(!h)return false;const owner=state.owned.some(x=>x.id===h.id)?playerStableName():worldOwner(h);const early=h.age<10&&(h.history||[]).length<30;let tax=0;let newOpts={...opts};if(early){tax=earlyRetirementTaxForOwner(owner);const gross=Number(opts.payout!=null?opts.payout:retirementPayout(h));newOpts.payout=Math.max(1,Math.round(gross-tax))}const ok=_retireHorseV064(h,reason,newOpts);if(ok&&early){recordEarlyRetirement(owner);if(tax>0)addWorldNews(`${owner} supporte une taxe de ${money(tax)} Or pour retraites anticipées répétées.`,`market`)}return ok};
-playerRetireHorse=function(id){const h=(state.owned||[]).find(x=>String(x.id)===String(id));if(!h)return toast("Cheval introuvable.");if(!canRetireNow(h))return toast("Retraite impossible : retire d’abord ce cheval de ses courses futures ou annule sa vente en cours.");const gross=retirementPayout(h),tax=(h.age<10&&(h.history||[]).length<30)?earlyRetirementTaxForOwner(playerStableName()):0,net=Math.max(1,gross-tax),estimate=auctionEstimate(h);if(!Number.isFinite(gross)||gross<=0||!Number.isFinite(estimate))return toast("Erreur de calcul de retraite : opération annulée.");const msg=`Mettre ${h.name} à la retraite ?\n\nPrime brute : ${money(gross)} Or.\nTaxe retraites anticipées : ${money(tax)} Or.\nTu recevras : ${money(net)} Or.\nValeur estimée de vente : environ ${money(estimate)} Or.\n\nLe cheval disparaîtra définitivement de ton écurie.`;if(!window.confirm(msg))return;if(!retireHorse(h,"Retraite décidée par son propriétaire",{payout:gross,manual:true}))return toast("Retraite annulée.");save();renderWorldNews();toast(`${h.name} prend sa retraite. +${money(net)} Or`)};
+function manualRetirementRemainingForOwner(owner,ts=Date.now()){
+  const arr=retirementHistoryForOwner(owner,ts);
+  const last=arr.length?Math.max(...arr.map(x=>Number(x.at)||0)):0;
+  return last?Math.max(0,MANUAL_RETIREMENT_COOLDOWN-(ts-last)):0;
+}
+function manualRetirementClock(ms){
+  const mins=Math.max(1,Math.ceil(ms/60000)),h=Math.floor(mins/60),m=mins%60;
+  return h?`${h} h${m?` ${m} min`:""}`:`${m} min`;
+}
+function earlyRetirementRepeatTaxForOwner(owner,ts=Date.now()){
+  const arr=retirementHistoryForOwner(owner,ts).filter(x=>ts-Number(x.at)<7*86400000);
+  const n=arr.length;
+  return [0,2000,3500,5500,8000,12000][Math.min(n,5)];
+}
+function earlyRetirementPenalty(h,owner,ts=Date.now()){
+  const gross=retirementPayout(h);
+  const races=Math.min(30,(h&&h.history||[]).length);
+  if(!h || h.age>=10 || races>=30)return {gross,tax:0,net:gross,rate:0,repeatTax:0,early:false};
+
+  // Retirer tôt doit être une mauvaise sortie financière. Plus la carrière est courte,
+  // plus la prime est confisquée. À 29 courses il reste encore une vraie pénalité.
+  let rate=races<8?.92:races<14?.84:races<20?.74:races<24?.62:races<27?.48:races<29?.32:.18;
+  if(Number(h.age||5)<=5)rate=Math.min(.96,rate+.04);
+  const repeatTax=earlyRetirementRepeatTaxForOwner(owner,ts);
+  const careerTax=Math.round(gross*rate/50)*50;
+  const tax=Math.min(Math.max(0,gross-1),careerTax+repeatTax);
+  const net=Math.max(1,gross-tax);
+  return {gross,tax,net,rate,repeatTax,careerTax,early:true};
+}
+function earlyRetirementTaxForOwner(owner,ts=Date.now()){
+  // Compatibilité avec les anciens appels : ceci représente seulement la récidive.
+  return earlyRetirementRepeatTaxForOwner(owner,ts);
+}
+function recordEarlyRetirement(owner,ts=Date.now()){
+  if(owner===playerStableName()){
+    ensureReputationState();state.earlyRetirements=state.earlyRetirements||[];state.earlyRetirements.push({at:ts});
+  }else{
+    const a=aiAgent(owner);if(a){ensureAIReputation(a);a.earlyRetirements.push({at:ts})}
+  }
+}
+const _retireHorseV064=retireHorse;
+retireHorse=function(h,reason="Fin de carrière",opts={}){
+  if(!h)return false;
+  const owner=state.owned.some(x=>x.id===h.id)?playerStableName():worldOwner(h);
+  const early=h.age<10&&(h.history||[]).length<30;
+  const voluntary=early&&opts.manual===true;
+
+  if(voluntary){
+    const remaining=manualRetirementRemainingForOwner(owner);
+    if(remaining>0)return false;
+  }
+
+  let newOpts={...opts};
+  let penalty=null;
+  if(voluntary){
+    penalty=earlyRetirementPenalty(h,owner);
+    // On ignore volontairement un payout manuel trop généreux : la taxe se calcule
+    // toujours sur la prime de carrière canonique.
+    newOpts.payout=penalty.net;
+  }
+
+  const ok=_retireHorseV064(h,reason,newOpts);
+  if(ok&&voluntary){
+    recordEarlyRetirement(owner);
+    addWorldNews(`${owner} met ${h.name} à la retraite avant sa fin naturelle : prime brute ${money(penalty.gross)} Or, pénalité ${money(penalty.tax)} Or, net ${money(penalty.net)} Or.`,`market`);
+  }
+  return ok;
+};
+
+function retirementUiData(h){
+  const d=retirementCareerDetails(h);
+  const owner=(state.owned||[]).some(x=>x.id===h.id)?playerStableName():worldOwner(h);
+  const p=earlyRetirementPenalty(h,owner);
+  const remaining=Math.max(0,Math.min(30-d.races,(10-Number(h.age||5))*4));
+  return {...d,...p,remaining};
+}
+function retirementUiHtmlV106(h,modal=false){
+  const d=retirementUiData(h),ae=auctionEstimate(h),blocked=!canRetireNow(h);
+  const projected=d.early?d.net:d.gross;
+  const penaltyHtml=d.early
+    ? `<div class="retirementPenalty"><b>⚠️ Retraite anticipée fortement taxée</b><br>Pénalité actuelle : <b>${money(d.tax)} Or</b> (${Math.round(d.tax/Math.max(1,d.gross)*100)} % de la prime). Tu ne toucherais que <b>${money(d.net)} Or</b>. Attendre la fin naturelle supprime cette pénalité.</div>`
+    : `<div class="retirementNatural"><b>✓ Fin de carrière naturelle</b><br>Aucune pénalité anticipée : la prime complète de carrière est versée.</div>`;
+  return `${careerRetirementAlertHtml(h)}
+    <div class="eyebrow" style="margin-top:9px">Prime de carrière</div>
+    <div class="sub">Elle progresse surtout avec les courses réellement disputées.</div>
+    <div class="retirementMoney">${money(d.gross)} Or</div>
+    <div class="retirementCareerBar"><div style="width:${Math.round(d.completion*100)}%"></div></div>
+    <div class="retirementBreakdown">
+      <div><span>Carrière</span><b>${d.races}/30 courses</b></div>
+      <div><span>Résultats</span><b>${d.wins} V · ${d.podiums} podiums</b></div>
+      <div><span>Fin naturelle max.</span><b>${d.remaining} course${d.remaining>1?"s":""}</b></div>
+    </div>
+    <div class="retirementCompare">Valeur actuelle : <b>${money(h.price)} Or</b> · Estimation de vente : <b>${money(ae)} Or</b>.<br>La prime crée un plancher de fin de carrière, mais une bonne revente doit rester plus rentable.</div>
+    ${penaltyHtml}
+    <div class="retirementWarn">${blocked?"Retraite verrouillée : retire d’abord ce cheval de ses courses futures ou annule sa vente en cours.":"Le cheval disparaît définitivement après confirmation."}</div>
+    <button type="button" class="secondary retirementActionBtn" ${blocked?"disabled":""} onclick="${modal?"closeHorseDetail();":""}playerRetireHorse('${h.id}')">Mettre à la retraite — recevoir ${money(projected)} Or</button>`;
+}
+
+playerRetireHorse=function(id){
+  const h=(state.owned||[]).find(x=>String(x.id)===String(id));
+  if(!h)return toast("Cheval introuvable.");
+  if(!canRetireNow(h))return toast("Retraite impossible : retire d’abord ce cheval de ses courses futures ou annule sa vente en cours.");
+
+  const early=h.age<10&&(h.history||[]).length<30;
+  if(early){
+    const remaining=manualRetirementRemainingForOwner(playerStableName());
+    if(remaining>0)return toast(`Une seule retraite volontaire est autorisée toutes les 24 h. Prochaine possibilité dans ${manualRetirementClock(remaining)}.`);
+  }
+
+  const d=retirementCareerDetails(h);
+  const p=earlyRetirementPenalty(h,playerStableName());
+  const estimate=auctionEstimate(h);
+  if(!Number.isFinite(d.payout)||d.payout<=0||!Number.isFinite(estimate))return toast("Erreur de calcul de retraite : opération annulée.");
+
+  const msg=early
+    ? `Mettre ${h.name} à la retraite AVANT sa fin naturelle ?\n\nPrime de carrière brute : ${money(p.gross)} Or.\nPÉNALITÉ RETRAITE ANTICIPÉE : -${money(p.tax)} Or (${Math.round(p.tax/Math.max(1,p.gross)*100)} %).\nTu recevras seulement : ${money(p.net)} Or.\nValeur estimée de vente : environ ${money(estimate)} Or.\n\nCette pénalité est volontairement très lourde pour empêcher d'acheter un vieux cheval uniquement afin d'encaisser sa prime. Une seule retraite volontaire est autorisée toutes les 24 h.\n\nLe cheval disparaîtra définitivement.`
+    : `Mettre ${h.name} à la retraite ?\n\nFin de carrière naturelle atteinte.\nPrime complète : ${money(d.payout)} Or.\nValeur estimée de vente : environ ${money(estimate)} Or.\n\nAucune taxe de retraite anticipée.\n\nLe cheval disparaîtra définitivement.`;
+  if(!window.confirm(msg))return;
+
+  if(!retireHorse(h,"Retraite décidée par son propriétaire",{payout:d.payout,manual:true})){
+    const remaining=manualRetirementRemainingForOwner(playerStableName());
+    return toast(remaining>0?`Retraite bloquée : prochaine retraite volontaire dans ${manualRetirementClock(remaining)}.`:"Retraite annulée.");
+  }
+  save();renderWorldNews();toast(`${h.name} prend sa retraite. +${money(early?p.net:d.payout)} Or`);
+};
 
 function backfillReputationFromExistingHistoryV066(){
   ensureReputationState();
@@ -9896,6 +10196,37 @@ setTimeout(bootGameFromIndexedDB,0);
     </div>`;
   }
 
+  function managerPendingCommitments(mid){
+    const now=Date.now();
+    const rows=[];
+    for(const r of (state.raceSchedule||[])){
+      if(!r||r.result||Number(r.startAt||0)<=now)continue;
+      const e=r.playerEntry;
+      const emid=e&&(e.managerId||(e.managerContract&&e.managerContract.managerId));
+      if(e&&String(emid||"")===String(mid||"")){
+        const h=(state.owned||[]).find(x=>x&&String(x.id)===String(e.horseId));
+        rows.push({r,h,entry:e});
+      }
+    }
+    return rows.sort((a,b)=>Number(a.r.startAt||0)-Number(b.r.startAt||0));
+  }
+
+  function managerCommitmentsHtml(mid,assigned){
+    const rows=managerPendingCommitments(mid);
+    if(!rows.length)return "";
+    return `<div class="managerCommitments">
+      <div class="eyebrow">Engagements en cours · ${rows.length}</div>
+      <div class="sub" style="margin-top:4px">Courses déjà acceptées qui doivent encore être courues. Elles ne comptent plus comme de nouvelles propositions.</div>
+      ${rows.map(x=>{
+        const old=assigned&&x.h&&String(x.h.id)!==String(assigned.id);
+        return `<div class="managerCommitmentCard">
+          <div class="row"><div><span class="managerCommitmentBadge">${old?"Ancienne affectation · " : ""}course déjà engagée</span><div class="managerName" style="margin-top:6px;font-size:18px">${typeof cleanRaceName==="function"?cleanRaceName(x.r.name):x.r.name}</div></div><div style="text-align:right"><b style="color:var(--gold)">${typeof raceClockTime==="function"?raceClockTime(x.r.startAt):"À venir"}</b></div></div>
+          <div class="managerCommitmentMeta">🐎 ${x.h?x.h.name:"Cheval engagé"} · ${x.r.distance||"—"} m · ${x.r.terrain||"terrain à confirmer"}</div>
+        </div>`;
+      }).join("")}
+    </div>`;
+  }
+
   function managerProfileHtml(mid,recs){
     let m=null;
     try{m=typeof managerProfile==="function"?managerProfile(mid):null}catch(e){console.warn("Profil manager ignoré",mid,e)}
@@ -9904,9 +10235,10 @@ setTimeout(bootGameFromIndexedDB,0);
     try{assigned=assignedHorse(mid)}catch(e){console.warn("Affectation manager ignorée",mid,e)}
     const expanded=managerProfilesExpanded.has(mid);
     const mine=(Array.isArray(recs)?recs:[]).filter(c=>{
-      try{return !!(c&&c.mid===mid&&c.h&&c.r&&!recommendationDeclined(c.mid,c.h.id,c.r.id))}
+      try{return !!(c&&c.mid===mid&&c.h&&c.r&&!recommendationDeclined(c.mid,c.h.id,c.r.id)&&!recommendationAccepted(c.mid,c.h.id,c.r.id))}
       catch(e){return false}
     });
+    const commitments=managerPendingCommitments(mid);
 
     return `<div class="managerProfileCard">
       <div class="managerProfileHead">
@@ -9916,7 +10248,7 @@ setTimeout(bootGameFromIndexedDB,0);
           <div class="managerProfileCompactInfo">
             ${m.desc}<br>
             ${assigned?`🐎 Responsable de <b style="color:var(--cream)">${assigned.name}</b>`:"Aucun cheval affecté"}
-            · ${mine.length} proposition${mine.length>1?"s":""} active${mine.length>1?"s":""}
+            · ${mine.length} nouvelle${mine.length>1?"s":""} proposition${mine.length>1?"s":""} · ${commitments.length} engagement${commitments.length>1?"s":""} en cours
           </div>
         </div>
         <button type="button" class="collapseBtn" onclick="toggleManagerProfile('${mid}')">${expanded?"Réduire":"Déployer"}</button>
@@ -9924,8 +10256,10 @@ setTimeout(bootGameFromIndexedDB,0);
       <div class="managerProfileBody ${expanded?"":"closed"}">
         ${managerStatsHtml(m)}
         ${assignmentHtml(mid,assigned)}
-        <div class="managerProfileRecoTitle">
-          <div class="eyebrow">Propositions de ${m.name}</div>
+        ${assigned?`<div class="managerCurrentMission"><div class="eyebrow">Mission actuelle</div><b>${m.name} recherche maintenant des courses pour ${assigned.name}.</b><br>Les courses déjà acceptées restent suivies séparément jusqu’à leur départ.</div>`:""}
+        ${managerCommitmentsHtml(mid,assigned)}
+        <div class="managerProfileRecoTitle managerSectionTitle">
+          <div class="eyebrow">Nouvelles propositions de ${m.name}</div>
           <div class="sub" style="margin-top:4px">Ses recommandations sont directement rattachées à son profil.</div>
         </div>
         ${assigned
@@ -10271,6 +10605,796 @@ setTimeout(bootGameFromIndexedDB,0);
     if(!document.hidden)setTimeout(refreshIfActive,60);
   });
 })();
+</script>
+
+<script>
+(function(){
+  function v101Repair(){
+    try{
+      if(typeof repairGhostSoldPlayerHorses==="function"){
+        const n=repairGhostSoldPlayerHorses();
+        if(n>0){
+          saveNoRender();
+          if(typeof renderStable==="function")renderStable();
+          if(typeof renderRaceBoard==="function")renderRaceBoard();
+          if(typeof renderBetHistory==="function")renderBetHistory();
+          if(typeof syncWalletUI==="function")syncWalletUI(true);
+          if(typeof toast==="function")toast("Correction vente : cheval vendu retiré de l’écurie et inscription fantôme remboursée.");
+        }
+      }
+    }catch(e){ console.error("V1.01 repair",e); }
+  }
+  setTimeout(v101Repair,250);
+  window.addEventListener("pageshow",()=>setTimeout(v101Repair,300));
+})();
+</script>
+
+
+
+<script>
+/* ===== V1.03 — ÉCURIES IA PÉRENNES / MODE SURVIE =====
+   Objectif : une écurie rivale conserve son identité. Elle ne disparaît plus
+   automatiquement pour être remplacée par une nouvelle dès qu'elle traverse
+   une mauvaise période. Elle réduit ses risques, vend des actifs et peut
+   utiliser une ligne de trésorerie qu'elle rembourse ensuite.
+*/
+(function(){
+  const AI_SURVIVAL_RESERVE = 2500;
+  const AI_EMERGENCY_CASH = 1000;
+  const AI_EMERGENCY_LISTING_COOLDOWN = 2*60*60*1000;
+
+  function aiOpenListings(name){
+    return (state.auction&&Array.isArray(state.auction.listings)?state.auction.listings:[])
+      .filter(l=>l&&l.status==="open"&&l.sellerName===name);
+  }
+
+  function aiSurvivalHorseCandidates(a){
+    return (state.worldHorses||[])
+      .filter(h=>h&&worldOwner(h)===a.name)
+      .filter(h=>h.age<10&&(h.history||[]).length<30&&!h.retirementPending)
+      .filter(h=>!(state.auction?.listings||[]).some(l=>l&&l.status==="open"&&l.horse&&l.horse.id===h.id))
+      .filter(h=>typeof horseCanBeListedRaceSafe!=="function"||horseCanBeListedRaceSafe(h))
+      .filter(h=>typeof aiHorseCanBeWithdrawnForSale!=="function"||aiHorseCanBeWithdrawnForSale(h));
+  }
+
+  function createAISurvivalListing(a){
+    if(!a||aiOpenListings(a.name).length>=2)return false;
+    const now=Date.now();
+    if(now-Number(a.lastEmergencyListingAt||0)<AI_EMERGENCY_LISTING_COOLDOWN)return false;
+
+    const choices=aiSurvivalHorseCandidates(a);
+    if(!choices.length)return false;
+
+    // En difficulté, l'écurie vend d'abord le cheval le moins stratégique :
+    // mauvaise forme / faible valeur / mauvais résultats récents.
+    const scored=choices.map(h=>{
+      const sig=typeof publicHorseSignals==="function"?publicHorseSignals(h):{bad:0,podiums:0};
+      return {
+        h,
+        score:Number(h.price||2500)
+          +(Number(h.form||50)-50)*35
+          +(sig.podiums||0)*450
+          -(sig.bad||0)*300
+      };
+    }).sort((x,y)=>x.score-y.score);
+
+    const base=scored[0].h;
+    if(typeof detachHorseFromFutureRacesForSale==="function"){
+      const detached=detachHorseFromFutureRacesForSale(base);
+      if(detached===false)return false;
+    }
+
+    const h={...base,history:[...(base.history||[])],valueHistory:[...(base.valueHistory||[])]};
+    const estimate=auctionEstimate(h);
+    const seller=humanSellerProfile(a.name,h);
+
+    // Vente de survie : attractive, mais pas bradée.
+    const ask=Math.max(500,Math.round(estimate*rnd(.82,.94)/50)*50);
+    const buyNow=Math.max(ask+100,Math.round(ask*rnd(1.04,1.10)/50)*50);
+
+    state.auction=state.auction||{};
+    state.auction.listings=state.auction.listings||[];
+    state.auction.listings.push({
+      id:uid(),horse:h,estimate,ask,buyNow,bestOffer:0,bestBuyer:null,
+      endsAt:now+rnd(22*60000,42*60000),myOffer:0,status:"open",
+      watchers:Math.floor(rnd(2,8)),seller,sellerName:a.name,
+      offerState:"",offerClass:"",lastPlayerOfferAt:0,counterOffer:0,
+      survivalSale:true
+    });
+
+    a.lastEmergencyListingAt=now;
+    a.survivalMode=true;
+    aiRemember(a,"survie",0,`mise en vente de ${h.name} pour renforcer la trésorerie`);
+    addWorldNews(`PLAN DE SURVIE — ${a.name} refuse de disparaître et place ${h.name} sur le marché pour renforcer sa trésorerie.`,`market`);
+    return true;
+  }
+
+  function giveAISurvivalCredit(a){
+    if(!a)return 0;
+    a.survivalDebt=Math.max(0,Number(a.survivalDebt||0));
+    const target=AI_EMERGENCY_CASH;
+    if(Number(a.cash||0)>=target)return 0;
+
+    // Ce n'est pas de l'argent gratuit : c'est une dette interne remboursée
+    // automatiquement quand l'écurie retrouve de la marge.
+    const amount=Math.max(0,Math.ceil(target-Number(a.cash||0)));
+    if(amount<=0)return 0;
+
+    a.cash+=amount;
+    a.survivalDebt+=amount;
+    a.survivalMode=true;
+    a.lastSurvivalCreditAt=Date.now();
+    a.stress=clamp(Math.max(Number(a.stress||0),.72),.02,.95);
+    aiRemember(a,"credit-survie",-amount,`ligne de trésorerie de ${amount} Or`);
+    addWorldNews(`RÉSISTANCE — ${a.name} sécurise ${money(amount)} Or de trésorerie temporaire au lieu de fermer. Dette de survie : ${money(a.survivalDebt)} Or.`,`market`);
+    return amount;
+  }
+
+  // Une "faillite" ne supprime plus l'identité de l'écurie.
+  // Elle déclenche maintenant une restructuration.
+  window.bankruptAIStable=function(name){
+    const a=state.aiStableAgents&&state.aiStableAgents[name];
+    if(!a)return false;
+
+    a.survivalMode=true;
+    a.restructuringCount=(a.restructuringCount||0)+1;
+    a.insolvencyTicks=Math.max(2,Number(a.insolvencyTicks||0)-2);
+    a.risk=clamp(Number(a.risk||.5)-.12,.08,.95);
+    a.patience=clamp(Number(a.patience||.5)+.10,.08,.95);
+    a.stress=clamp(Math.max(Number(a.stress||.3),.68),.02,.95);
+
+    createAISurvivalListing(a);
+    giveAISurvivalCredit(a);
+
+    addWorldNews(`RESTRUCTURATION — ${name} traverse une crise mais reste dans le championnat. L'écurie réduit ses risques et se bat pour survivre.`,`market`);
+    return true;
+  };
+
+  window.checkAIStableBankruptcies=function(){
+    ensureAIStableAgents();
+    Object.values(state.aiStableAgents||{}).forEach(a=>{
+      ensureAIStableBusinessMeta(a);
+      evolveAIStable(a,true);
+
+      const cash=Number(a.cash||0);
+      if(cash<0)a.insolvencyTicks=(a.insolvencyTicks||0)+1;
+      else if(cash<500)a.insolvencyTicks=(a.insolvencyTicks||0)+.45;
+      else if(cash<1500)a.insolvencyTicks=(a.insolvencyTicks||0)+.18;
+      else a.insolvencyTicks=Math.max(0,(a.insolvencyTicks||0)-.6);
+
+      if(cash<AI_SURVIVAL_RESERVE){
+        a.survivalMode=true;
+        a.stress=clamp(Number(a.stress||.3)+.045,.02,.95);
+
+        // Première réaction : vendre intelligemment avant d'emprunter.
+        if(cash<1500)createAISurvivalListing(a);
+
+        // Si la caisse est réellement à sec, ligne de trésorerie.
+        if(cash<0 || ((a.insolvencyTicks||0)>=5 && cash<500)){
+          giveAISurvivalCredit(a);
+          a.insolvencyTicks=Math.max(1,Number(a.insolvencyTicks||0)-2.5);
+        }
+      }else if(cash>AI_SURVIVAL_RESERVE*1.8){
+        a.survivalMode=false;
+        a.insolvencyTicks=Math.max(0,Number(a.insolvencyTicks||0)-.8);
+      }
+    });
+  };
+
+  // Remboursement automatique de la dette quand la situation s'améliore.
+  const _applyAIBusinessCycleV103=window.applyAIBusinessCycle;
+  if(typeof _applyAIBusinessCycleV103==="function"){
+    window.applyAIBusinessCycle=function(a,at){
+      _applyAIBusinessCycleV103(a,at);
+      if(!a)return;
+
+      a.survivalDebt=Math.max(0,Number(a.survivalDebt||0));
+      if(a.survivalDebt>0 && Number(a.cash||0)>AI_SURVIVAL_RESERVE){
+        const available=Number(a.cash||0)-AI_SURVIVAL_RESERVE;
+        const repay=Math.min(a.survivalDebt,Math.max(0,Math.round(available*.40)));
+        if(repay>0){
+          a.cash-=repay;
+          a.survivalDebt-=repay;
+          aiRemember(a,"remboursement-survie",-repay,`remboursement de dette`);
+        }
+      }
+      if(a.survivalDebt<=0 && Number(a.cash||0)>AI_SURVIVAL_RESERVE*1.8)a.survivalMode=false;
+    };
+  }
+
+  // Une écurie en mode survie ne se remet pas immédiatement à acheter.
+  const _chooseHumanBuyerV103=window.chooseHumanBuyer;
+  if(typeof _chooseHumanBuyerV103==="function"){
+    window.chooseHumanBuyer=function(h,exclude=null){
+      ensureAIStableAgents();
+      const estimate=Math.max(500,auctionEstimate(h));
+      const agents=Object.values(state.aiStableAgents||{})
+        .filter(a=>a.name!==exclude)
+        .filter(a=>stableHasCapacity(a.name,1))
+        .filter(a=>!a.survivalMode)
+        .filter(a=>Number(a.cash||0)>Math.max(3500,estimate*.72));
+
+      if(!agents.length)return null;
+      const scored=agents.map(a=>{
+        evolveAIStable(a);
+        const willingness=aiHumanWillingness(a,h,estimate);
+        const impulse=1+rnd(-.20,.20)+(a.mood>0?.05:0)+(a.stress>.7?-.08:0);
+        return {a,score:Math.max(.02,willingness*impulse)};
+      });
+      const total=scored.reduce((sum,x)=>sum+x.score,0);
+      let roll=Math.random()*total;
+      for(const x of scored){roll-=x.score;if(roll<=0)return x.a}
+      return scored[scored.length-1].a;
+    };
+  }
+
+  // Migration douce : aucune écurie actuelle n'est supprimée ou réinitialisée.
+  try{
+    ensureAIStableAgents();
+    Object.values(state.aiStableAgents||{}).forEach(a=>{
+      if(!Number.isFinite(Number(a.survivalDebt)))a.survivalDebt=0;
+      if(typeof a.survivalMode!=="boolean")a.survivalMode=false;
+      if(!Number.isFinite(Number(a.restructuringCount)))a.restructuringCount=0;
+    });
+    saveNoRender();
+  }catch(e){console.error("V1.03 AI survival migration",e)}
+})();
+</script>
+
+
+<script>
+/* ===== V1.04 — INTÉGRITÉ RESPONSABLE CHEVAL / TRANSFERTS / ENGAGEMENTS =====
+   - Un manager ne peut plus changer de cheval tant qu'il possède une inscription future active.
+   - Une inscription manager active redevient la source de vérité après restauration d'une sauvegarde.
+   - Les anciens verrous/dossiers liés à un cheval vendu, une course terminée ou une ancienne affectation sont purgés.
+   - Les inscriptions fantômes d'un cheval qui n'appartient plus au joueur sont annulées et remboursées une seule fois.
+*/
+(function(){
+  "use strict";
+
+  function v104Ready(){
+    state.management=state.management||{};
+    state.management.assignments=state.management.assignments&&typeof state.management.assignments==="object"?state.management.assignments:{};
+    state.management.managerRaceLocks=state.management.managerRaceLocks&&typeof state.management.managerRaceLocks==="object"?state.management.managerRaceLocks:{};
+    state.management.declined=state.management.declined&&typeof state.management.declined==="object"?state.management.declined:{};
+    state.management.history=Array.isArray(state.management.history)?state.management.history:[];
+    state.management.searchUntil=state.management.searchUntil&&typeof state.management.searchUntil==="object"?state.management.searchUntil:{};
+  }
+  function ownedSet(){return new Set((state.owned||[]).filter(Boolean).map(h=>String(h.id)))}
+  function raceById(rid){return (state.raceSchedule||[]).find(r=>r&&String(r.id)===String(rid))||null}
+  function horseById(hid){return (state.owned||[]).find(h=>h&&String(h.id)===String(hid))||null}
+  function entryManagerId(e){return e&&(e.managerId||e.managerContract?.managerId)||null}
+  function isManagerEntry(e){return !!(e&&(e.source==="manager"||e.managerId||e.managerContract?.managerId))}
+  function isFutureRace(r){return !!(r&&!r.result&&Number(r.startAt||0)>Date.now())}
+
+  function activeCommitments(mid){
+    return (state.raceSchedule||[])
+      .filter(isFutureRace)
+      .filter(r=>{
+        const e=r.playerEntry;
+        return e&&isManagerEntry(e)&&String(entryManagerId(e)||"")===String(mid||"")&&horseById(e.horseId);
+      })
+      .sort((a,b)=>Number(a.startAt||0)-Number(b.startAt||0));
+  }
+
+  function managerLockReason(mid){
+    const rows=activeCommitments(mid);
+    if(!rows.length)return null;
+    const r=rows[0],e=r.playerEntry,h=horseById(e.horseId);
+    return {race:r,entry:e,horse:h};
+  }
+
+  function removeGhostEntry(r,owned){
+    const e=r&&r.playerEntry;
+    if(!isFutureRace(r)||!e||owned.has(String(e.horseId)))return false;
+    const refund=Math.max(0,Number(e.fee||0));
+    if(refund>0){
+      state.balance=Number(state.balance||0)+refund;
+      state.stats=state.stats||{};
+      state.stats.ownerEntryFees=Math.max(0,Number(state.stats.ownerEntryFees||0)-refund);
+    }
+    const hid=e.horseId;
+    r.playerEntry=null;
+    r.field=(r.field||[]).filter(x=>String(x&&x.id)!==String(hid));
+    try{if(typeof refillOfficialField==="function")refillOfficialField(r,hid)}catch(_e){}
+    try{if(typeof recalcRaceOdds==="function")recalcRaceOdds(r)}catch(_e){}
+    return true;
+  }
+
+  function repairManagerIntegrity(){
+    v104Ready();
+    const owned=ownedSet();
+    let changed=false,ghosts=0;
+
+    // 1) Aucune course future du joueur ne peut appartenir à un cheval qui a quitté l'écurie.
+    for(const r of (state.raceSchedule||[])){
+      if(removeGhostEntry(r,owned)){changed=true;ghosts++;}
+    }
+
+    // 2) Une vraie inscription manager future est prioritaire sur une affectation modifiée par l'ancien bug.
+    const byManager=new Map();
+    for(const r of (state.raceSchedule||[]).filter(isFutureRace).sort((a,b)=>Number(a.startAt||0)-Number(b.startAt||0))){
+      const e=r.playerEntry;
+      if(!e||!isManagerEntry(e)||!owned.has(String(e.horseId)))continue;
+      const mid=entryManagerId(e); if(!mid)continue;
+      if(!byManager.has(String(mid)))byManager.set(String(mid),e.horseId);
+    }
+    for(const [mid,hid] of byManager){
+      if(String(state.management.assignments[mid]||"")!==String(hid)){
+        state.management.assignments[mid]=hid;changed=true;
+      }
+    }
+
+    // 3) Supprime les affectations de chevaux sortis de l'écurie.
+    for(const mid of Object.keys(state.management.assignments||{})){
+      const hid=state.management.assignments[mid];
+      if(!owned.has(String(hid))){
+        delete state.management.assignments[mid];
+        delete state.management.searchUntil[mid];
+        changed=true;
+      }
+    }
+
+    // 4) Nettoie les dossiers/verrous devenus historiques ou orphelins.
+    for(const key of Object.keys(state.management.managerRaceLocks||{})){
+      const lock=state.management.managerRaceLocks[key];
+      if(!lock){delete state.management.managerRaceLocks[key];changed=true;continue;}
+      const r=raceById(lock.raceId),hid=lock.horseId,mid=lock.managerId;
+      const e=r&&r.playerEntry;
+      const matchingEntry=!!(e&&String(e.horseId)===String(hid)&&isManagerEntry(e)&&String(entryManagerId(e)||"")===String(mid||""));
+      const stillAssigned=String(state.management.assignments[mid]||"")===String(hid);
+      if(!owned.has(String(hid))||!isFutureRace(r)||(!stillAssigned&&!matchingEntry)){
+        delete state.management.managerRaceLocks[key];changed=true;
+      }
+    }
+
+    // 5) Les refus ne doivent pas survivre à une course disparue/terminée, un cheval vendu ou une ancienne affectation.
+    for(const key of Object.keys(state.management.declined||{})){
+      const parts=String(key).split("|");
+      if(parts.length<3)continue;
+      const mid=parts[0],hid=parts[1],rid=parts.slice(2).join("|");
+      const r=raceById(rid);
+      if(!owned.has(String(hid))||!isFutureRace(r)||String(state.management.assignments[mid]||"")!==String(hid)){
+        delete state.management.declined[key];changed=true;
+      }
+    }
+
+    state.management.integrityV104={at:Date.now(),ghostEntriesRepaired:ghosts};
+    return {changed,ghosts};
+  }
+
+  function persistRepair(result,announce){
+    if(!result||!result.changed)return;
+    try{
+      if(typeof persistStateSafely==="function")persistStateSafely();
+      else if(typeof saveNoRender==="function")saveNoRender();
+    }catch(e){console.error("V1.04 sauvegarde réparation managers",e)}
+    try{if(typeof syncWalletUI==="function")syncWalletUI(true)}catch(_e){}
+    if(announce&&typeof toast==="function"){
+      toast(result.ghosts>0
+        ? "Responsables réparés : anciennes associations nettoyées et inscription fantôme remboursée."
+        : "Responsables réparés : engagements et chevaux associés resynchronisés.");
+    }
+  }
+
+  // Garde-fou moteur FINAL : aucune ancienne couche ne peut contourner cette règle.
+  const previousAssignV104=window.assignManager;
+  if(typeof previousAssignV104==="function"){
+    window.assignManager=function(mid,hid){
+      v104Ready();
+      const lock=managerLockReason(mid);
+      const current=state.management.assignments[mid]||"";
+      if(lock&&String(hid||"")!==String(current)){
+        const h=lock.horse||horseById(lock.entry.horseId);
+        return toast(`${h?h.name:"Ce cheval"} est déjà engagé avec ce manager à ${typeof cleanRaceName==="function"?cleanRaceName(lock.race.name):lock.race.name}. Impossible de changer de cheval avant la course ou sa désinscription.`);
+      }
+      const ret=previousAssignV104.apply(this,arguments);
+      persistRepair(repairManagerIntegrity(),false);
+      return ret;
+    };
+  }
+
+  function applyManagerAssignmentLocks(){
+    const root=document.getElementById("managementContent");if(!root)return;
+    root.querySelectorAll('select[onchange*="assignManager("]').forEach(sel=>{
+      const call=sel.getAttribute("onchange")||"";
+      const m=call.match(/assignManager\('([^']+)'/);if(!m)return;
+      const mid=m[1],lock=managerLockReason(mid);if(!lock)return;
+      sel.disabled=true;
+      sel.title="Changement verrouillé : une course manager est déjà engagée.";
+      const parent=sel.closest(".managerAssign");
+      if(parent&&!parent.parentElement.querySelector(`.v104ManagerAssignmentLock[data-mid="${mid}"]`)){
+        const note=document.createElement("div");
+        note.className="managerManualLock v104ManagerAssignmentLock";
+        note.dataset.mid=mid;
+        const h=lock.horse||horseById(lock.entry.horseId);
+        note.innerHTML=`<b>Affectation verrouillée.</b><br>${h?h.name:"Ce cheval"} possède une course déjà engagée avec ce manager. Tu pourras changer de cheval après cette course ou après une désinscription autorisée.`;
+        parent.insertAdjacentElement("afterend",note);
+      }
+    });
+  }
+
+  const previousRenderV104=window.renderManagement;
+  if(typeof previousRenderV104==="function"){
+    window.renderManagement=function(){
+      const rep=repairManagerIntegrity();
+      const ret=previousRenderV104.apply(this,arguments);
+      applyManagerAssignmentLocks();
+      if(rep.changed)setTimeout(()=>persistRepair(rep,false),0);
+      return ret;
+    };
+  }
+
+  // Toute sauvegarde passe par un nettoyage léger afin qu'un transfert ne laisse plus de mémoire manager orpheline.
+  const previousSaveNRV104=window.saveNoRender;
+  if(typeof previousSaveNRV104==="function"){
+    window.saveNoRender=function(){
+      repairManagerIntegrity();
+      return previousSaveNRV104.apply(this,arguments);
+    };
+  }
+  const previousSaveV104=window.save;
+  if(typeof previousSaveV104==="function"){
+    window.save=function(){
+      repairManagerIntegrity();
+      return previousSaveV104.apply(this,arguments);
+    };
+  }
+
+  function bootV104(announce){
+    try{
+      const rep=repairManagerIntegrity();
+      persistRepair(rep,announce&&rep.changed);
+      if(document.getElementById("management")?.classList.contains("active")){
+        try{window.renderManagement()}catch(e){console.error("V1.04 rendu managers",e)}
+      }
+    }catch(e){console.error("V1.04 manager integrity",e)}
+  }
+  setTimeout(()=>bootV104(true),360);
+  window.addEventListener("pageshow",()=>setTimeout(()=>bootV104(false),220));
+})();
+</script>
+
+
+<script>
+// ===== V1.05 — RECOMMANDATIONS MANAGER STRICTEMENT LIÉES AU CHEVAL ACTUEL =====
+(function(){
+  "use strict";
+
+  function v105Ready(){
+    state.management=state.management||{};
+    state.management.assignments=state.management.assignments&&typeof state.management.assignments==="object"?state.management.assignments:{};
+    state.management.managerRaceLocks=state.management.managerRaceLocks&&typeof state.management.managerRaceLocks==="object"?state.management.managerRaceLocks:{};
+    state.management.declined=state.management.declined&&typeof state.management.declined==="object"?state.management.declined:{};
+    state.management.searchUntil=state.management.searchUntil&&typeof state.management.searchUntil==="object"?state.management.searchUntil:{};
+  }
+  function ownedHorse(hid){
+    return (state.owned||[]).find(h=>h&&String(h.id)===String(hid))||null;
+  }
+  function futureRace(rid){
+    return (state.raceSchedule||[]).find(r=>r&&String(r.id)===String(rid)&&!r.result&&Number(r.startAt||0)>Date.now())||null;
+  }
+  function entryManagerId(e){return e&&(e.managerId||e.managerContract?.managerId)||null;}
+  function genuineAcceptedEntry(mid,hid,rid){
+    const r=futureRace(rid),e=r&&r.playerEntry;
+    return !!(e&&String(e.horseId)===String(hid)&&String(entryManagerId(e)||"")===String(mid||""));
+  }
+
+  function purgeOldManagerDossiers(mid,currentHid){
+    v105Ready();
+    let changed=false;
+    const cur=String(currentHid||"");
+
+    // Un dossier ouvert n'a aucune raison de survivre s'il concernait l'ancien cheval,
+    // sauf s'il correspond à une véritable inscription future déjà acceptée.
+    for(const key of Object.keys(state.management.managerRaceLocks||{})){
+      const lock=state.management.managerRaceLocks[key];
+      if(!lock||String(lock.managerId||"")!==String(mid||""))continue;
+      if(String(lock.horseId||"")===cur)continue;
+      if(genuineAcceptedEntry(mid,lock.horseId,lock.raceId))continue;
+      delete state.management.managerRaceLocks[key];
+      changed=true;
+    }
+
+    // Même règle pour les refus : ils appartiennent au couple manager + cheval.
+    for(const key of Object.keys(state.management.declined||{})){
+      const parts=String(key).split("|");
+      if(parts.length<3||String(parts[0])!==String(mid||""))continue;
+      const hid=parts[1];
+      if(String(hid)===cur)continue;
+      delete state.management.declined[key];
+      changed=true;
+    }
+    return changed;
+  }
+
+  // Filtre FINAL posé au-dessus de toutes les anciennes versions et de leur cache.
+  // Même si une vieille ligne reste 15 s dans recoCache, elle ne peut plus être affichée.
+  const previousRecommendationsV105=window.managementRecommendations;
+  if(typeof previousRecommendationsV105==="function"){
+    window.managementRecommendations=function(){
+      v105Ready();
+      let rows=[];
+      try{rows=previousRecommendationsV105.apply(this,arguments)||[]}catch(e){console.error("V1.05 recommandations",e);return []}
+      return (Array.isArray(rows)?rows:[]).filter(c=>{
+        if(!c||!c.mid||!c.h||!c.r)return false;
+        const assigned=state.management.assignments[c.mid];
+        if(!assigned)return false;
+        if(String(c.h.id)!==String(assigned))return false;
+        if(!ownedHorse(c.h.id))return false;
+        if(!futureRace(c.r.id))return false;
+        return true;
+      });
+    };
+  }
+
+  // Après une affectation réellement autorisée, effacement immédiat des dossiers de l'ancien cheval.
+  const previousAssignV105=window.assignManager;
+  if(typeof previousAssignV105==="function"){
+    window.assignManager=function(mid,hid){
+      v105Ready();
+      const before=state.management.assignments[mid]||"";
+      const ret=previousAssignV105.apply(this,arguments);
+      const after=state.management.assignments[mid]||"";
+      if(String(before)!==String(after)){
+        const changed=purgeOldManagerDossiers(mid,after);
+        try{
+          if(changed&&typeof persistStateSafely==="function")persistStateSafely();
+          else if(changed&&typeof saveNoRender==="function")saveNoRender();
+        }catch(e){console.error("V1.05 sauvegarde purge dossiers",e)}
+        setTimeout(()=>{try{if(typeof renderManagement==="function")renderManagement()}catch(e){}},0);
+      }
+      return ret;
+    };
+  }
+
+  function bootV105(){
+    try{
+      v105Ready();
+      let changed=false;
+      for(const mid of Object.keys(state.management.assignments||{})){
+        if(purgeOldManagerDossiers(mid,state.management.assignments[mid]))changed=true;
+      }
+      if(changed){
+        try{if(typeof persistStateSafely==="function")persistStateSafely();else if(typeof saveNoRender==="function")saveNoRender()}catch(e){}
+      }
+      if(document.getElementById("management")?.classList.contains("active")){
+        try{renderManagement()}catch(e){console.error("V1.05 rendu managers",e)}
+      }
+    }catch(e){console.error("V1.05 boot",e)}
+  }
+  setTimeout(bootV105,430);
+  window.addEventListener("pageshow",()=>setTimeout(bootV105,260));
+})();
+
+
+// ===== V1.05 — ÉCONOMIE DE TRADING VIVANTE / OFFRE & DEMANDE =====
+// Le marché n'est plus une simple traduction des performances sportives :
+// les prix réagissent aussi aux stocks, aux budgets réels des écuries IA,
+// aux pénuries, aux excès d'offre, au momentum et aux prises de bénéfices.
+function ensureTradingEconomyV105(){
+  state.tradingEconomy=state.tradingEconomy&&typeof state.tradingEconomy==="object"?state.tradingEconomy:{};
+  state.tradingEconomy.history=Array.isArray(state.tradingEconomy.history)?state.tradingEconomy.history:[];
+  state.tradingEconomy.lastHeadlineAt=Number(state.tradingEconomy.lastHeadlineAt||0);
+  state.tradingEconomy.lastSnapshotAt=Number(state.tradingEconomy.lastSnapshotAt||0);
+}
+function tradeSegmentsV105(h){
+  const p=Math.max(700,Number(h&&h.price||2500)),age=Number(h&&h.age||5);
+  return {
+    price:p<=2000?"cheap":p<=8000?"mid":"premium",
+    age:age<=4?"young":age<=7?"prime":"veteran"
+  };
+}
+function openMarketListingsV105(){
+  return [
+    ...((state.auction&&state.auction.listings)||[]).filter(l=>l&&l.status==="open"),
+    ...((state.auction&&state.auction.myListings)||[]).filter(l=>l&&l.status==="open")
+  ];
+}
+function tradingMarketSnapshotV105(){
+  ensureWorldEconomy();ensureAIStableAgents();ensureTradingEconomyV105();
+  const active=(state.worldHorses||[]).filter(h=>h&&h.age<10&&(h.history||[]).length<30&&!h.retirementPending);
+  const listings=openMarketListingsV105();
+  const agents=Object.values(state.aiStableAgents||{});
+  const keys=["cheap","mid","premium","young","prime","veteran"];
+  const supply=Object.fromEntries(keys.map(k=>[k,0]));
+  const listed=Object.fromEntries(keys.map(k=>[k,0]));
+  const demand=Object.fromEntries(keys.map(k=>[k,0]));
+  active.forEach(h=>{const s=tradeSegmentsV105(h);supply[s.price]++;supply[s.age]++;});
+  listings.forEach(l=>{const h=worldHorseById(l.horse&&l.horse.id)||l.horse;if(!h)return;const s=tradeSegmentsV105(h);listed[s.price]++;listed[s.age]++;});
+  agents.forEach(a=>{
+    if(!a||!stableHasCapacity(a.name,1)||Number(a.cash||0)<700)return;
+    evolveAIStable(a);
+    const cash=Math.max(0,Number(a.cash||0));
+    const need=clamp(1-aiStableHorseCount(a.name)/Math.max(1,state.maxStableHorses||5),.12,1);
+    const stress=Number(a.stress||.4),risk=Number(a.risk||.5),confidence=Number(a.confidence||.5);
+    // Budget : les petites écuries entretiennent une vraie demande sur le bas de gamme.
+    demand.cheap+=need*(cash<4500?1.35:cash<9000?.85:.45)*(1+stress*.18);
+    if(cash>2500)demand.mid+=need*(cash<9000?.85:1.10)*(1+confidence*.12);
+    if(cash>7500)demand.premium+=need*(.45+risk*.75)*(1-stress*.20);
+    // Âge : le risque élevé crée de la spéculation sur les vieux chevaux décotés.
+    demand.young+=need*(.68+(1-risk)*.50);
+    demand.prime+=need*(.78+confidence*.32);
+    demand.veteran+=need*(.30+risk*.90+stress*.15);
+  });
+  const pressure={};
+  keys.forEach(k=>{
+    // Un cheval non listé compte comme stock latent, une annonce comme stock réellement disponible.
+    const effectiveSupply=Math.max(.8,listed[k]*1.65+Math.max(0,supply[k]-listed[k])*.18);
+    pressure[k]=clamp(demand[k]/effectiveSupply,.18,3.6);
+  });
+  const values=active.map(h=>Number(h.price||0)).filter(Number.isFinite).sort((a,b)=>a-b);
+  const index=values.length?Math.round(values.reduce((a,b)=>a+b,0)/values.length):0;
+  return {at:Date.now(),active:listings.length?active.length:active.length,listings:listings.length,supply,listed,demand,pressure,index};
+}
+function snapshotChangeV105(key,current,windowMs=60*60*1000){
+  ensureTradingEconomyV105();
+  const now=Date.now();
+  const hist=(state.tradingEconomy.history||[]).filter(x=>now-Number(x.at||0)<=windowMs);
+  const old=[...hist].reverse().find(x=>x&&x.values&&Number.isFinite(Number(x.values[key])));
+  if(!old||!Number(old.values[key]))return 0;
+  return (current-Number(old.values[key]))/Number(old.values[key]);
+}
+function categoryAverageV105(snapshot,key){
+  const active=(state.worldHorses||[]).filter(h=>h&&h.age<10&&(h.history||[]).length<30);
+  const vals=active.filter(h=>{const s=tradeSegmentsV105(h);return s.price===key||s.age===key}).map(h=>Number(h.price||0)).filter(Number.isFinite);
+  return vals.length?vals.reduce((a,b)=>a+b,0)/vals.length:0;
+}
+function saveMarketSnapshotV105(snap){
+  ensureTradingEconomyV105();
+  const values={index:snap.index};
+  ["cheap","mid","premium","young","prime","veteran"].forEach(k=>values[k]=categoryAverageV105(snap,k));
+  state.tradingEconomy.history.push({at:Date.now(),values,pressure:{...snap.pressure},listed:{...snap.listed}});
+  state.tradingEconomy.history=state.tradingEconomy.history.filter(x=>Date.now()-Number(x.at||0)<24*60*60*1000).slice(-320);
+  state.tradingEconomy.lastSnapshotAt=Date.now();
+  return values;
+}
+function marketPressureForHorseV105(h,snap=null){
+  snap=snap||tradingMarketSnapshotV105();
+  const s=tradeSegmentsV105(h);
+  return clamp((snap.pressure[s.price]*.62+snap.pressure[s.age]*.38),.18,3.6);
+}
+function marketDemandLabelV105(p){
+  return p>=2.1?"🔥 Pénurie / ruée":p>=1.45?"Forte demande":p>=.85?"Équilibré":p>=.55?"Demande faible":"Surstock";
+}
+function maybeMarketHeadlineV105(snap){
+  ensureTradingEconomyV105();
+  const now=Date.now();if(now-state.tradingEconomy.lastHeadlineAt<12*60*1000)return;
+  const labels={cheap:"chevaux à moins de 2 000 Or",mid:"milieu de gamme",premium:"chevaux premium",young:"jeunes chevaux",prime:"chevaux de 5 à 7 ans",veteran:"vieux chevaux de 8-9 ans"};
+  const entries=Object.entries(snap.pressure).sort((a,b)=>b[1]-a[1]);
+  const hot=entries[0],cold=[...entries].sort((a,b)=>a[1]-b[1])[0];
+  if(hot&&hot[1]>=1.75){
+    addWorldNews(`TENSION DE MARCHÉ — ruée sur les ${labels[hot[0]]}. Le stock disponible se raréfie et les prix peuvent s'emballer sans amélioration sportive.`,`market`);
+    state.tradingEconomy.lastHeadlineAt=now;
+  }else if(cold&&cold[1]<=.48){
+    addWorldNews(`SURSTOCK — trop de ${labels[cold[0]]} face au nombre d'acheteurs. Les vendeurs pourraient devoir casser leurs prix.`,`market`);
+    state.tradingEconomy.lastHeadlineAt=now;
+  }
+}
+
+// Remplacement volontaire de l'ancienne cotation très stable.
+marketPulse=function(force=false){
+  ensureWorldEconomy();ensureTradingEconomyV105();
+  const interval=state.marketPulseInterval||5*60*1000,now=Date.now();
+  let cycles=Math.floor((now-(state.lastMarketPulse||now))/interval);
+  if(force)cycles=Math.max(1,cycles);if(cycles<=0)return false;cycles=Math.min(cycles,6);
+  for(let c=0;c<cycles;c++){
+    const snap=tradingMarketSnapshotV105();
+    const preValues={};["cheap","mid","premium","young","prime","veteran"].forEach(k=>preValues[k]=categoryAverageV105(snap,k));
+    const active=(state.worldHorses||[]).filter(h=>h.age<10&&(h.history||[]).length<30&&!h.retirementPending);
+    active.forEach(h=>{
+      const old=Math.max(700,Number(h.price||2500)),seg=tradeSegmentsV105(h);
+      const pPrice=snap.pressure[seg.price],pAge=snap.pressure[seg.age];
+      const combined=pPrice*.64+pAge*.36;
+      const hist=(h.history||[]).slice(-6),avg=hist.length?hist.reduce((s,x)=>s+Number(x.place||5),0)/hist.length:4.5;
+      // Sport = seulement une couche. Le marché peut désormais aller à l'encontre du niveau du cheval.
+      const sport=clamp((4.4-avg)*.0015,-.006,.006);
+      let demandMove=clamp((combined-1)*.026,-.045,.060);
+      // Momentum : une hausse attire des acheteurs, mais crée aussi le risque d'une prise de bénéfices.
+      const catNow=preValues[seg.price]||old;
+      const oneHour=snapshotChangeV105(seg.price,catNow,75*60*1000);
+      let momentum=clamp(oneHour*.055,-.010,.014);
+      let profitTaking=0;
+      if(oneHour>.24)profitTaking-=.006+(oneHour-.24)*.035;
+      if(oneHour>.42&&Math.random()<.12)profitTaking-=rnd(.035,.085); // mini-krach de bulle
+      // Pénuries et surstocks peuvent produire de vrais mouvements brutaux.
+      let shock=rnd(-.006,.006);
+      if(combined>1.85&&Math.random()<.10)shock+=rnd(.035,.095);
+      if(combined<.52&&Math.random()<.10)shock-=rnd(.035,.090);
+      // Les très vieux chevaux deviennent spéculatifs : grosse amplitude, mais risque élevé.
+      if(Number(h.age||5)>=8)shock*=1.25;
+      let drift=clamp(sport+demandMove+momentum+profitTaking+shock,-.115,.125);
+      // Garde-fous seulement aux extrêmes : le marché peut être fou sans devenir irréparable.
+      if(old>50000&&drift>0)drift*=.55;
+      if(old<=850&&drift<0)drift*=.30;
+      const next=Math.round(old*(1+drift)/50)*50;
+      recordValuePoint(h,next,Math.abs(demandMove)>Math.abs(sport)*2?"offre-demande":"cotation");
+      if(Math.abs((h.price-old)/old)>=.065)addWorldNews(`${h.name} subit un mouvement de marché : ${h.price>=old?"+":""}${Math.round((h.price-old)/old*100)}% à ${money(h.price)} Or, sans que cela signifie forcément qu'il court mieux.`,`market`);
+    });
+    const post=tradingMarketSnapshotV105();saveMarketSnapshotV105(post);maybeMarketHeadlineV105(post);
+  }
+  state.lastMarketPulse=now;saveNoRender();return true;
+};
+
+// Les IA regardent désormais aussi le marché, pas seulement la qualité sportive.
+const _aiHumanWillingnessV104=aiHumanWillingness;
+aiHumanWillingness=function(a,h,estimate){
+  let base=_aiHumanWillingnessV104(a,h,estimate);
+  try{
+    const p=marketPressureForHorseV105(h);
+    const s=tradeSegmentsV105(h);
+    const speculative=(Number(a&&a.risk||.5)-.5)*(s.age==="veteran"?.22:.10);
+    base+=clamp((p-1)*.15,-.18,.28)+speculative;
+  }catch(e){}
+  return clamp(base,.48,1.65);
+};
+const _listingAttractivenessV104=listingAttractiveness;
+listingAttractiveness=function(l){
+  let a=_listingAttractivenessV104(l);
+  try{a+=clamp((marketPressureForHorseV105(l.horse)-1)*.22,-.20,.34)}catch(e){}
+  return a;
+};
+
+function tradingBoardHtmlV105(){
+  const snap=tradingMarketSnapshotV105();
+  const hist=state.tradingEconomy&&state.tradingEconomy.history||[];
+  let general=0;if(hist.length){const old=hist[Math.max(0,hist.length-12)]?.values?.index;if(old)general=(snap.index-old)/old;}
+  const rows=[
+    ["< 2 000 Or","cheap"],["2 000–8 000 Or","mid"],["> 8 000 Or","premium"],["8–9 ans","veteran"]
+  ];
+  const hottest=rows.map(x=>[x[0],x[1],snap.pressure[x[1]]]).sort((a,b)=>b[2]-a[2])[0];
+  return `<div class="marketEconomyBoard">
+    <div class="marketEconomyHead"><div><div class="eyebrow">Bourse hippique</div><h3>Offre & demande réelle</h3><div class="sub">Les performances ne suffisent plus : budgets IA, stock, pénuries et prises de bénéfices déplacent les prix.</div></div><div class="marketEconomyIndex">${money(snap.index)}<div class="${general>=0?'up':'down'}" style="font:900 10px Inter,sans-serif">${general>=0?'+':''}${Math.round(general*1000)/10}% récent</div></div></div>
+    <div class="marketEconomyGrid">${rows.map(([label,key])=>{const p=snap.pressure[key],cls=p>=1.45?'hot':p<.7?'down':'up';return `<div class="marketEconomyCell"><span>${label}</span><b class="${cls}">${marketDemandLabelV105(p)}</b><div class="sub">${snap.listed[key]} en vente · pression ${p.toFixed(2)}</div></div>`}).join('')}</div>
+    <div class="marketEconomyNews"><b>À surveiller :</b> ${hottest?`${hottest[0]} — ${marketDemandLabelV105(hottest[2])}.`:"Marché équilibré."} Un cheval médiocre peut donc monter uniquement parce que sa catégorie manque, et un crack peut chuter s'il est surpayé ou si trop de vendeurs arrivent.</div>
+  </div>`;
+}
+function horseTradeAnalysisHtmlV105(h){
+  const snap=tradingMarketSnapshotV105(),p=marketPressureForHorseV105(h,snap);
+  const vh=(h.valueHistory||[]).slice(-40),vals=vh.map(x=>Number(x.value)).filter(Number.isFinite);
+  const low=vals.length?Math.min(...vals):Number(h.price||0),high=vals.length?Math.max(...vals):Number(h.price||0);
+  const races=(h.history||[]).length,remaining=Math.max(0,Math.min(30-races,(10-Number(h.age||5))*4));
+  const recent=(h.history||[]).slice(-6);
+  const avg=recent.length?recent.reduce((sum,x)=>sum+Number(x.place||5),0)/recent.length:null;
+  const podiums=recent.filter(x=>Number(x.place)<=3).length;
+  const wins=recent.filter(x=>Number(x.place)===1).length;
+  const demand=p>=1.55?"Très recherchée":p>=1.15?"Demandée":p>=.85?"Équilibrée":p>=.60?"Peu demandée":"Surstock";
+  const demandHelp=p>=1.15?"plus d'acheteurs que d'habitude":p<.85?"beaucoup d'offre, peu d'acheteurs":"offre et acheteurs assez équilibrés";
+  const trend=vals.length>1?(vals[vals.length-1]-vals[0])/Math.max(1,vals[0]):0;
+  const sportText=!recent.length?"Aucune course récente":`${avg.toFixed(1)}e de moyenne sur ${recent.length} course${recent.length>1?'s':''}`;
+  let verdict,verdictClass;
+  if(p>=1.15&&trend>=-.03){verdict="Marché favorable : ce cheval attire actuellement les acheteurs. Son prix peut rester soutenu même si ses résultats sportifs sont moyens.";verdictClass="good"}
+  else if(p<.85){verdict="Marché difficile : il y a trop de chevaux comparables à vendre. Acheter n'est intéressant que si le prix est vraiment bas ou si tu crois à un retournement.";verdictClass="bad"}
+  else {verdict="Marché neutre : pas de ruée ni de braderie. Ici, le prix d'achat et les prochaines courses comptent davantage que la spéculation pure.";verdictClass="mid"}
+  return `<div class="tradeAnalysisBox"><div class="eyebrow">Avant d'acheter</div><h3 style="margin-top:4px">Ce qu'il faut regarder</h3><div class="tradeAnalysisGrid">
+    <div class="tradeAnalysisStat"><span>Forme sur les dernières courses</span><b>${sportText}</b><small>${recent.length?`${wins} victoire${wins>1?'s':''} · ${podiums} podium${podiums>1?'s':''}`:"Pas assez de recul"}</small></div>
+    <div class="tradeAnalysisStat"><span>État du marché</span><b>${demand}</b><small>${demandHelp}</small></div>
+    <div class="tradeAnalysisStat"><span>Prix vus récemment</span><b>${money(low)} – ${money(high)} Or</b><small>Fourchette des derniers mouvements de sa valeur</small></div>
+    <div class="tradeAnalysisStat"><span>Courses encore possibles</span><b>${remaining} max.</b><small>${races} course${races>1?'s':''} déjà courue${races>1?'s':''} sur une carrière de 30 max.</small></div>
+  </div><div class="tradeVerdict ${verdictClass}"><strong>En clair :</strong> ${verdict}</div></div>`;
+}
+
+
+const _renderMarketV104=renderMarket;
+renderMarket=function(){
+  _renderMarketV104();
+  if(marketInputEditing)return;
+  const box=$("auctionList");if(!box)return;
+  const existing=box.querySelector('.marketEconomyBoard');if(existing)existing.remove();
+  const wrap=document.createElement('div');wrap.innerHTML=tradingBoardHtmlV105();
+  const node=wrap.firstElementChild;if(node)box.insertBefore(node,box.firstChild?box.firstChild.nextSibling:null);
+};
+const _openHorseDetailByIdV104=openHorseDetailById;
+openHorseDetailById=function(id){
+  _openHorseDetailByIdV104(id);
+  try{
+    const h=worldHorseById(id)||(state.owned||[]).find(x=>String(x.id)===String(id));if(!h)return;
+    const modal=$("horseModal")&&$("horseModal").querySelector('.modalCard');if(!modal)return;
+    const old=modal.querySelector('.tradeAnalysisBox');if(old)old.remove();
+    const holder=document.createElement('div');holder.innerHTML=horseTradeAnalysisHtmlV105(h);modal.appendChild(holder.firstElementChild);
+  }catch(e){console.error('Trade analysis:',e)}
+};
+
 </script>
 
 </body>
